@@ -1,0 +1,49 @@
+//Copy this XAML code to your VS design window. Modify if necessary
+<StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Blue Arduino" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0" FontSize="64" FontFamily="Segoe WP Black" Foreground="#FF1C23C7"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF3DB8DC" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBox x:Name="DeviceName" HorizontalAlignment="Left" Height="72" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="217" Margin="39,437,0,0">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF8F9FB" Offset="0"/>
+                        <GradientStop Color="#FFC1C1D1" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Button x:Name="on" Content="ON" HorizontalAlignment="Left" Margin="116,254,0,0" VerticalAlignment="Top" Click="on_Click" Height="100" Width="101" RenderTransformOrigin="0.5,0.5" Foreground="Black" BorderBrush="White">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF3FD613" Offset="0"/>
+                        <GradientStop Color="#FFF0EEF1" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="off" Content="OFF" HorizontalAlignment="Left" Margin="246,254,0,0" VerticalAlignment="Top" Click="off_Click" Height="100" Width="100" RenderTransformOrigin="0.5,0.5" Foreground="#FF040404" BorderBrush="White">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFEC391D" Offset="0.377"/>
+                        <GradientStop Color="#FFF0EEF1" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="connect" Content="CONNECT" HorizontalAlignment="Left" Margin="261,437,0,0" VerticalAlignment="Top" Width="161" Click="connect_Click" Foreground="Black" Height="72" BorderBrush="White">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE4E5F1" Offset="0"/>
+                        <GradientStop Color="#FFC0C2E8" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Margin="10,23,2,528" FontSize="64" FontFamily="Segoe WP Black" Foreground="White">
+            	<Run FontSize="17.777" Text="               Simplest Windows Bluetooth Application"/>
+            </TextBlock>
+        </Grid>
