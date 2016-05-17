@@ -1,0 +1,24 @@
+#include <SoftwareSerial.h>  
+SoftwareSerial BTSerial(10, 11); // We configure PIN 10 as RX and PIN 11 as TX
+void setup()  
+{  
+  pinMode(13,OUTPUT); //Led is connected here  
+  BTSerial.begin(9600); //Begin the serial communication with bluetooth  
+}  
+void loop()  
+{  
+  char c;  
+  if(BTSerial.available())  
+  {  
+    c = BTSerial.read();  
+    if(c=='1')  // Simplest way of detecting HIGH
+    {  
+      digitalWrite(13,HIGH); //Set pin 13 to high "LED GLOWS" 
+    }  
+    else if(c=='0') // Simplest way of detecting LOW 
+    {  
+      digitalWrite(13,LOW); //Set pin 13 to low "LEDS STOPS GLOWING" 
+    }  
+   }  
+  }  
+}  
